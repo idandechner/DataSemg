@@ -27,7 +27,8 @@ def run_predict():
             with open(os.path.join(srcDir, names[i] + ".pkl"), "rb") as f:
                 gmms.append(pickle.load(f))
         res = np.zeros(2) # create array of zeros
-        cnt = np.zeros(2) # create array of zeros
+        cnt = np.zeros(2) # create arr
+        # ay of zeros
         srcDirTest = os.path.join(test_path, sf) # concatinate main folder to subfolder
         for root, dirnames, filenames in os.walk(srcDirTest): # loop over tree folder
             for filename in fnmatch.filter(filenames, "*_feature.npy"): # loop over files in folder
